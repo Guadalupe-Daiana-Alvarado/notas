@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Notes App</title>
+</head>
+
+<body>
+    <div class="bg-emerald-700 text-black w-full min-h-screen flex flex-col">
+        <header class="text-center p-5">
+            <h1 class="text-4xl font-bold">Notes</h1>
+        </header>
+        <main class="grow text-center p-5 flex flex-col items-center">
+            <form id="form-add">
+                <input class="w-full p-3 rounded-lg outline-none mb-3" type="text" name="title" placeholder="Título de la nota" required>
+                <textarea class="w-full h-40 p-3 rounded-lg outline-none mb-3" name="description" placeholder="Descripción de la nota" required></textarea>
+                <button class="bg-pink-700 p-3 rounded-lg text-white m-5" type="submit">Agregar Nota</button>
+            </form>
+            
+            <!-- Contenedor para mostrar las notas -->
+            <div class="w-3/4 flex flex-col items-center gap-3" id="notes-container"></div>
+
+
+            <search class="flex gap-2 mt-4">
+                <input class="rounded ps-2 text-zinc-800 outline-none" type="text" name="search" id="search" autocomplete="off" placeholder="Title Note">
+                <input class="hidden peer" type="checkbox" name="" id="filter-pending">
+                <label for="filter-pending" class="select-none peer-checked:bg-emerald-700 peer-checked:text-white cursor-pointer px-5 py-2 bg-white text-emerald-700 rounded font-semibold "> Pending</label>
+            </search> 
+
+
+        </main>
+        <footer>
+            <p class="text-center p-5">CodeUP MERN 2024 - Guadalupe Alvarado</p>
+        </footer>
+    </div>
+    <script src="./scripts/app.js"></script>
+</body>
+</html>
